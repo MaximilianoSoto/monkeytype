@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto-Maxi-Type</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <header>
+            <div class="left">
+                <svg width="34" height="34"  viewBox="0 0 24 24" fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-keyboard-hide"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 3m0 2a2 2 0 0 1 2 -2h16a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-16a2 2 0 0 1 -2 -2z" /><path d="M6 7l0 .01" /><path d="M10 7l0 .01" /><path d="M14 7l0 .01" /><path d="M18 7l0 .01" /><path d="M6 11l0 .01" /><path d="M18 11l0 .01" /><path d="M10 11l4 0" /><path d="M10 21l2 -2l2 2" /></svg>
+                <h1>monkeytype</h1>
+            </div>
+            <div class="right">
+                <svg width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-user"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 2a5 5 0 1 1 -5 5l.005 -.217a5 5 0 0 1 4.995 -4.783z" /><path d="M14 14a5 5 0 0 1 5 5v1a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-1a5 5 0 0 1 5 -5h4z" /></svg>
+                <span>GoldenLion</span>
+            </div>
+        </header>
+        <section id="game">
+            <div class="timer">
+              <time></time>
+              <span><button  id="btn_30">30</button>/<button id="btn_60">60</button>/<button id="btn_120">120</button></span>
+            </div>
+            <p></p>
+            <input autofocus>
+            <button class="reload-button" id="reload-button-1">
+              <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" />
+                <path d="M20 4v5h-5" />
+              </svg>
+            </button>
+          </section>
+          <section id="results">
+            <h2>wpm</h2>
+            <h3 id="results-wpm"></h3>
+      
+            <h2>accuracy</h2>
+            <h3 id="results-accuracy"></h3>
+      
+            <button id="reload-button-2">
+              <svg width="54" height="54" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M19.933 13.041a8 8 0 1 1 -9.925 -8.788c3.899 -1 7.935 1.007 9.425 4.747" />
+                <path d="M20 4v5h-5" />
+              </svg>
+            </button>
+          </section>
+    </main>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+:root{
+    color-scheme: light dark;
+    --green: #00b755;
+    --yellow: #daaf38;
+    --red: #ca4754;
+    --black: #222;
+    --gray: #999;
+}
+
+body{
+    background: var(--black);
+    font-family: menlo, monospace;
+    display: grid;
+    padding: 32px;
+    justify-content: center;
+    margin-top: 48px;
+   
+}
+
+main{
+    margin: auto;
+    width: 60%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left svg {
+    margin-top: 10px;
+}
+
+.right{
+    display: flex;
+    gap: 10px;
+}
+
+section{
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    background-color: #333;
+    margin-top: 10%;
+}
+time{
+    display: flex;
+    align-items: end;
+    font-size: 30px;
+    color: var(--yellow);
+}
+
+.timer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+span{
+    color: var(--yellow);
+    margin: 0 ;
+    padding: 0;
+    font-size: 20px;
+
+}
+
+p{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 30px;
+}
+
+input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    opacity: 0;
+}
+
+letter{
+    color: var(--gray);
+    position: relative; 
+    padding: 0px 1px;
+    
+   
+    &.active::before{
+        content: '|';
+        color: var(--yellow);
+        font-size: 30px;
+        position: absolute;
+        top: 10%;
+        left: -35%;
+        
+        animation: 1.5s blink infinite ease-in-out;
+    }
+
+
+   
+    &.active.is-last::before{
+        left: 95%;
+    }
+
+    &.correct{
+        color: var(--green);
+    }
+
+    &.incorrect{
+        color: var(--red);
+    }
+}
+
+word{
+    border-bottom: 1.5px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+
+    &.marked{
+        border-color: var(--red);
+    }
+}
+
+.reload-button{
+    margin: 0 auto;
+    display: flex;
+    margin-top: 50px;
+}
+
+@keyframes blink{
+    0%, 25%{
+        opacity: 1;
+    }
+    85%{
+        opacity: 0;
+    }
+}
+
+#game {
+    display: flex;
+  }
+
+#results {
+    display: none;
+}
+
+  h2 {
+    font-weight: 400;
+    opacity: .4;
+    margin: 0;
+    font-size: 30px;
+  }
+
+  h3 {
+    font-weight: 400;
+    margin: 0;
+    font-size: 30px;
+    color: var(--yellow);
+  }
+
+  button {
+    background: transparent;
+    border: 0;
+    margin-top: 32px;
+    padding: 8px;
+    opacity: .4;
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 16px;
+
+    &:hover {
+      background: #444;
+      opacity: 1;
+      scale: 110%;
+    }
+  }
